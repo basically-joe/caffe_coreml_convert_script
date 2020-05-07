@@ -1,8 +1,8 @@
 import coremltools
 
-caffe_model = ("oxford102.caffemodel", "deploy.prototxt")
+caffe_model = ("CAFFEMODELNAME.caffemodel", "deploy.prototxt")
 
-labels = "flower-labels.txt"
+labels = "LABELSFILENAME.txt"
 
 coreml_model = coremltools.converters.caffe.convert(
     caffe_model,
@@ -10,4 +10,4 @@ coreml_model = coremltools.converters.caffe.convert(
     image_input_names="data"
 )
 
-coreml_model.save("FlowerClassifier.mlmodel")
+coreml_model.save("NAMEOFCOREMLMODEL.mlmodel")
